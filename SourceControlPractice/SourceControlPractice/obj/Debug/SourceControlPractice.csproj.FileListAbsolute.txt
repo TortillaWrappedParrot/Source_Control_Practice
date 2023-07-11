@@ -1,0 +1,8 @@
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\bin\Debug\SourceControlPractice.exe.config
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\bin\Debug\SourceControlPractice.exe
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\bin\Debug\SourceControlPractice.pdb
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\obj\Debug\SourceControlPractice.csproj.AssemblyReference.cache
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\obj\Debug\SourceControlPractice.csproj.SuggestedBindingRedirects.cache
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\obj\Debug\SourceControlPractice.csproj.CoreCompileInputs.cache
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\obj\Debug\SourceControlPractice.exe
+C:\Users\parro\OneDrive\Documents\GitHub\Source_Control_Practice\SourceControlPractice\SourceControlPractice\obj\Debug\SourceControlPractice.pdb
