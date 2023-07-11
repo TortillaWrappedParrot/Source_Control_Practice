@@ -79,6 +79,13 @@ namespace SourceControlPractice
                         Console.WriteLine("-------------------------------");
                         break;
                     case 3:
+                        Console.WriteLine("Enter your line with whitespaces");
+                        string unFixedLine = Console.ReadLine();
+                        string fixedLine = new string(unFixedLine.ToCharArray()
+                        .Where(c => !Char.IsWhiteSpace(c))
+                        .ToArray());
+                        Console.WriteLine(fixedLine);
+                        Console.WriteLine("-------------------------------");
                         break;
                     case 4:
                         break;
