@@ -74,6 +74,9 @@ namespace SourceControlPractice
                         Console.WriteLine("-------------------------------");
                         break;
                     case 2:
+                        Console.WriteLine("Enter your untrimmed line");
+                        Console.WriteLine(Console.ReadLine().Trim());
+                        Console.WriteLine("-------------------------------");
                         break;
                     case 3:
                         break;
