@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,7 +26,8 @@ namespace SourceControlPractice
                 while (result == false && result != true)
                 {
                     Console.WriteLine("Please enter a valid number");
-                    result = int.TryParse(Console.ReadLine(), out _);
+                    line = Console.ReadLine();
+                    result = int.TryParse(line, out _);
                 }
                 assignment = int.Parse(line);
                 switch (assignment)
@@ -37,7 +39,8 @@ namespace SourceControlPractice
                         while (num1Check == false)
                         {
                             Console.WriteLine("Please enter a valid int");
-                            num1Check = int.TryParse(Console.ReadLine(), out _);
+                            num1Input = Console.ReadLine();
+                            num1Check = int.TryParse(num1Input, out _);
                         }
                         Console.WriteLine("Enter your comparetor");
                         string compareterInput = Console.ReadLine().Trim();
@@ -52,7 +55,8 @@ namespace SourceControlPractice
                         while (num2Check == false)
                         {
                             Console.WriteLine("Please enter a valid int");
-                            num2Check = int.TryParse(Console.ReadLine(), out _);
+                            num2Input = Console.ReadLine();
+                            num2Check = int.TryParse(num2Input, out _);
                         }
                         int num1 = int.Parse(num1Input);
                         int num2 = int.Parse(num2Input);
@@ -68,7 +72,14 @@ namespace SourceControlPractice
                                 Console.WriteLine(num1 - num2);
                                 break;
                             case "/":
-                                Console.WriteLine(num1 / num2);
+                                if (num1 != 0 && num2 != 0)
+                                {
+                                    Console.WriteLine(num1 / num2);
+                                } else
+                                {
+                                    Console.WriteLine("Attempted division by zero");
+                                }
+                                
                                 break;
                         }
                         Console.WriteLine("-------------------------------");
@@ -88,11 +99,43 @@ namespace SourceControlPractice
                         Console.WriteLine("-------------------------------");
                         break;
                     case 4:
+                        Random rnd = new Random();
+                        int trys = 0;
+                        int num = rnd.Next(1, 100);
+                        Console.WriteLine("I've picked a number between 1-100.");
+                        int guess = 0;
+                        Console.WriteLine(num);
+                        while (guess != num)
+                        {
+                            Console.WriteLine("Enter your guess");
+                            string stringGuess = Console.ReadLine();
+                            while (int.TryParse(stringGuess, out _) == false)
+                            {
+                                Console.WriteLine("That's not a valid number!");
+                                stringGuess = Console.ReadLine();
+                            }
+                            guess = int.Parse(stringGuess);
+                            if (guess < num)
+                            {
+                                Console.WriteLine("Your guess is too low!");
+                            } else
+                            {
+                                if (guess != num)
+                                {
+                                    Console.WriteLine("Your guess is too high!");
+                                }
+                            }
+                            trys++;
+                        }
+                        Console.WriteLine("You got it!, my number was " + num + " and you got it in " + trys + " tries!");
+                        Console.WriteLine("-------------------------------");
                         break;
                     case 5:
+                        Environment.Exit(0);
                         break;
                     default:
                         Console.WriteLine("Invalid input");
+                        Console.WriteLine("-------------------------------");
                         break;
                 }
             }
